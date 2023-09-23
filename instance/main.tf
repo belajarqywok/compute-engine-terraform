@@ -14,7 +14,13 @@ resource "google_compute_instance" "vm_instance" {
         access_config {}
     }
 
+    scheduling {
+        preemptible = true
+        automatic_restart = true
+    }
+
     metadata = {
-        ssh-keys = "${var.gce_ssh_user}:${file(var.gce_ssh_pub_key_file)}"
+        # ssh-keys = "${var.gce_ssh_user}:${file(var.gce_ssh_pub_key_file)}"
+        metadata_startup_script = file("startup_script.sh")
     }
 }
