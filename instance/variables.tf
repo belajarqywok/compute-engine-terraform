@@ -33,13 +33,13 @@ variable "instance_subnetwork" {
 }
 
 # SSH User
-variable "gce_ssh_user" {
-    description = "Compute Engine SSH user"
-    type = string
-}
+# variable "gce_ssh_user" {
+#     description = "Compute Engine SSH user"
+#     type = string
+# }
 
 # SSH Public Key
-variable "gce_ssh_pub_key_file" {
-    description = "Compute Engine SSH Public Key"
-    type = string
-}
+# variable "gce_ssh_pub_key_file" {
+#     description = "Compute Engine SSH Public Key"
+#     type = string
+# }

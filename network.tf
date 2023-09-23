@@ -11,7 +11,7 @@ resource "google_compute_firewall" "network-allow-http-ssh-rdp-icmp" {
 
     allow {
         protocol = "tcp"
-        ports    = ["22", "80", "3389"]
+        ports    = ["22", "80", "443", "3389"]
     }
 
     allow {protocol = "icmp"}
